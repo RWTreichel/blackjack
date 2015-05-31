@@ -10,6 +10,7 @@ class window.Card extends Backbone.Model
         when 11 then 'jack'
         when 12 then 'queen'
         else params.rank
+      animated: false
     @set
       imgPath: ( =>
           value = if typeof @get 'rankName' == 'string' then @get 'rankName' else @get 'value'
